@@ -22,8 +22,9 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0
+        
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore src/WebApi/Fiap.TechChallenge.Fase1.WebAPI/Fiap.TechChallenge.Fase1.WebAPI.sln
       
     - name: Build projeto
       run: dotnet build --no-restore
