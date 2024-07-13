@@ -20,12 +20,15 @@ jobs:
     - name: Setup do .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 8.0
     - name: Restore dependencies
       run: dotnet restore
+      
     - name: Build projeto
       run: dotnet build --no-restore
+      
     - name: Teste projeto
       run: dotnet test --no-build --verbosity normal
+      
     - name: Saída Texto
       run: echo "Build e testes finalizados para a validação do Tech Challenge Fase 2"
